@@ -1,0 +1,87 @@
+/* GRID SPACING */
+.row {
+  margin-top: 30px;
+}
+
+/* CARD */
+.card {
+  border: none;
+  border-radius: 14px;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+}
+
+/* CARD HOVER */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.14);
+}
+
+/* IMAGE */
+.card-img-top {
+  height: 160px;              /* reduced image height */
+  object-fit: contain;        /* show full product image */
+  padding: 12px;              /* spacing around image */
+  transition: transform 0.4s ease;
+}
+
+/* IMAGE ZOOM ON HOVER */
+.card:hover .card-img-top {
+  transform: scale(1.03);     /* subtle zoom */
+}
+
+/* CARD BODY */
+.card-body {
+  padding: 14px 14px 18px;
+  text-align: center;
+}
+
+/* TITLE */
+.card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1c1c1c;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* DESCRIPTION */
+.card-text {
+  font-size: 0.82rem;
+  color: #777;
+  line-height: 1.4;
+  margin-bottom: 6px;
+  height: 38px;
+  overflow: hidden;
+}
+
+/* PRICE */
+.card-text:last-child {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0d6efd;
+  margin-top: 8px;
+}
+
+/* RESPONSIVE TUNING */
+@media (max-width: 1200px) {
+  .card-img-top {
+    height: 150px;
+  }
+}
+
+@media (max-width: 992px) {
+  .card-img-top {
+    height: 140px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-img-top {
+    height: 160px;
+  }
+}
