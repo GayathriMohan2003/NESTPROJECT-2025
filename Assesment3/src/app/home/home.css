@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+  padding-top: 80px; /* for fixed navbar */
+  background-color: #ffffff;
+  color: #222;
+}
+.carousel-item {
+  min-height: 80vh;
+}
+
+.image-diagonal {
+  height: 80vh;
+  overflow: hidden;
+}
+
+.image-diagonal img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+}
+
+.slide-content {
+  padding: 60px;
+}
+
+.slide-content h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0d2c6c;
+  margin-bottom: 20px;
+}
+
+.slide-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* MOBILE FIX */
+@media (max-width: 991px) {
+  .image-diagonal {
+    height: 300px;
+  }
+
+  .image-diagonal img {
+    clip-path: none;
+  }
+
+  .slide-content {
+    padding: 30px;
+  }
+}

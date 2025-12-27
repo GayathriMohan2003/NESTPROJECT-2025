@@ -1,0 +1,30 @@
+.navbar {
+  padding: 12px 0;
+}
+
+.navbar-brand strong {
+  font-size: 20px;
+  color: #0d2c6c;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #222 !important;
+  margin: 0 12px;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #0d6efd !important;
+}
+
+/* ACTIVE LINK */
+.nav-link.active::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #0d6efd;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+}
