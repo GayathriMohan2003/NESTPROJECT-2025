@@ -1,0 +1,25 @@
+<div class="saved-jobs-container">
+  <h2 class="text-center mb-4">Saved Jobs</h2>
+
+  <div *ngIf="savedJobs.length === 0" class="text-center text-muted">
+    No saved jobs yet.
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 mb-3" *ngFor="let job of savedJobs">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">{{job.title}}</h5>
+          <p class="card-subtitle mb-1 text-muted">{{job.company_name}}</p>
+          <p class="mb-1"><strong>Category:</strong> {{job.category}}</p>
+          <p class="mb-2"><strong>Type:</strong> {{job.job_type}} | <strong>Location:</strong> {{job.candidate_required_location}}</p>
+          
+          <div class="mt-auto d-flex justify-content-between">
+            <a [href]="job.url" target="_blank" class="btn btn-primary btn-sm">Apply</a>
+            <button class="btn btn-danger btn-sm" (click)="removeJob(job)">Remove</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
